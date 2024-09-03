@@ -1,32 +1,5 @@
 # Node.js dependencies
 node_modules/
 
-# Build output
-dist/
-build/
-
-# Logs
-*.log
-
 # Environment variables
 .env
-
-# OS-specific files
-.DS_Store
-Thumbs.db
-
-# IDE-specific files
-.vscode/
-.idea/
-
-# Temporary files
-*.tmp
-*.swp
-
-# Ignoring all files in the `uploads` directory except the `.gitkeep` file
-uploads/*
-!uploads/.gitkeep
-
-# Specific files to ignore
-*.sqlite
-*.db
