@@ -14,7 +14,9 @@ const PORT = 8000;
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 
-app.use(cors());
+app.use(cors({
+    origin: 'https://image-text-ai.vercel.app',
+  }));
 app.use(express.json()); 
 
 
