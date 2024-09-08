@@ -14,9 +14,7 @@ const PORT = 8000;
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 
-app.use(cors({
-    origin: 'https://image-text-ai.vercel.app',
-  }));
+app.use(cors())
 app.use(express.json()); 
 
 
@@ -37,10 +35,12 @@ let filePath;
 
 app.post('/api/v1/upload', (req, res) => {
     upload(req, res, (err) => {
+        
         if (err) {
             return res.status(500).json(err);
         }
         filePath = req.file.path;
+        console.log(filePath)
         res.status(200).json({ message: 'File uploaded successfully', path: filePath });
     });
 });
