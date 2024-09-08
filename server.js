@@ -13,13 +13,8 @@ const app = express();
 const PORT = 8000;
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-const corsOptions = {
-    origin: 'https://image-text-ai.vercel.app', 
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    credentials: true, 
-    optionsSuccessStatus: 200 
-  };
-app.use(cors(corsOptions));
+
+app.use(cors());
 app.use(express.json()); 
 
 
